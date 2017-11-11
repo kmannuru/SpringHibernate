@@ -42,6 +42,15 @@ public class CricketCoach implements Coach{
 	public String getDailyFortune() {
 		return this.fortuneService.getFortune();
 	}
+
+	
+	public void initMethod() {
+		System.out.println("init method of bean creation");
+	}
+	
+	public void destroyMethod() {
+		System.out.println("destroy method of bean creation");
+	}
 	
 
 }
