@@ -10,12 +10,20 @@ public class HelloSpring {
 		System.out.println("Today's workout is = "+myCoach.getDailyWorkout());
 		System.out.println("Fortune for today is : "+myCoach.getDailyFortune());
 		
-		Coach myCricketCoach = context.getBean("myCricketCoach", Coach.class);
+		CricketCoach myCricketCoach = context.getBean("myCricketCoach", CricketCoach.class);
+		CricketCoach newCricketCoach = context.getBean("myCricketCoach", CricketCoach.class);
 		System.out.println("-----Cricket Coach------");
 		System.out.println("Today's workout is = "+myCricketCoach.getDailyWorkout());
 		System.out.println("Fortune for today is : "+myCricketCoach.getDailyFortune());
 		//System.out.println("Team : "+myCricketCoac);
+		System.out.println("email : "+myCricketCoach.getEmail()+ " ----Team Name :"+myCricketCoach.getTeam());
 		
+		if(myCricketCoach == newCricketCoach) {
+			System.out.println("both objects are equal");
+		}
+		
+		System.out.println(myCricketCoach);
+		System.out.println(newCricketCoach);
 		context.close();
 
 	}
